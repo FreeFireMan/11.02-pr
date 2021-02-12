@@ -62,3 +62,48 @@ for (const rule of rules) {
     rules.append(body);
 } */
 
+/* 3 *** за допомогою fetch (як в прикладі) отримати від jsonplaceholder всі users. За допомогою document.createElement вивести їх в браузер. Помістити кожен окремий об'єкт в блок, при цьому кожен внутрішній об'єкт в свій блок (блок в блоці). */
+/*fetch('https://jsonplaceholder.typicode.com/users')
+    .then(response => response.json())
+    .then(result => {
+        for (const user of result) {
+            let div = document.createElement('div');
+
+            div.innerText = `${user.id}, ${user.name}, ${user.username}, ${user.email}, ${user.phone}, ${user.website},`
+
+                let divAddress = document.createElement('div');
+                divAddress.innerText = `address: ${user.address.street}, ${user.address.suite}, ${user.address.city}, ${user.address.zipcode}, geo: ${user.address.geo.lat}, ${user.address.geo.lng},`;
+                div.append(divAddress);
+
+                let divCompany = document.createElement('div');
+                divCompany.innerText = `company: ${user.company.name}, ${user.company.catchPhrase}, ${user.company.bs}`
+                div.append(divCompany);
+            
+            document.body.appendChild(div);
+        }
+    }) */
+
+/* 4 *** за допомогою fetch (як в прикладі) отримати від jsonplaceholder всі posts. За допомогою document.createElement вивести їх в браузер. Помістити кожен окремий об'єкт в блок, при цьому кожен внутрішній об'єкт(якщо він існує) в свій блок (блок в блоці). */
+/*fetch('https://jsonplaceholder.typicode.com/posts')
+    .then(response => response.json())
+    .then(result => {
+        for (const post of result) {
+            let div = document.createElement('div');
+            div.innerText = `${post.userId}, ${post.id}, ${post.title}, ${post.body}`
+            document.body.appendChild(div);
+        }
+    }) */
+
+/* 5 *** за допомогою fetch (як в прикладі) отримати від jsonplaceholder всі comments. За допомогою document.createElement вивести їх в браузер. Помістити кожен окремий об'єкт в блок, при цьому кожен внутрішній об'єкт(якщо він існує) в свій блок (блок в блоці). */
+/*fetch('https://jsonplaceholder.typicode.com/comments')
+    .then(response => response.json())
+    .then(result => {
+        for (const comment of result) {
+            let div = document.createElement('div');
+            div.innerText = `${comment.postId}, ${comment.id}, ${comment.name}, ${comment.email}, ${comment.body}`
+            document.body.appendChild(div);
+        }
+    }) */
+
+/* 6 ****** при помощи fetch (как в примере) получить от jsonplaceholder все posts. Внутри последнего then() сделать еще один fetch который сделает запрос и получит все comments. Объеденить соответсвующий post с соответсвующими comment и вывести в браузер. Подсказка : в каждом comment есть поле postId которое определяет какой комментарий принадлежит какому посту
+© 2021 GitHub, Inc. */
