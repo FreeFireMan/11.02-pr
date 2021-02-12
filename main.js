@@ -107,3 +107,20 @@ for (const rule of rules) {
 
 /* 6 ****** при помощи fetch (как в примере) получить от jsonplaceholder все posts. Внутри последнего then() сделать еще один fetch который сделает запрос и получит все comments. Объеденить соответсвующий post с соответсвующими comment и вывести в браузер. Подсказка : в каждом comment есть поле postId которое определяет какой комментарий принадлежит какому посту
 © 2021 GitHub, Inc. */
+/*fetch('https://jsonplaceholder.typicode.com/posts')
+    .then(response => response.json())
+    .then(resultPosts => {
+        fetch('https://jsonplaceholder.typicode.com/comments')
+            .then(response => response.json())
+            .then(resultComments =>{
+                for (const post of resultPosts) {
+                    for (const comment of resultComments) {
+                        if (post.id === comment.postId) {
+                            let div = document.createElement('div');
+                            div.innerText = `Post: ${post.userId}, ${post.id}, ${post.title}, ${post.body}. Comment: ${comment.postId}, ${comment.id}, ${comment.name}, ${comment.email}, ${comment.body}.`;
+                            document.body.appendChild(div);
+                        }
+                    }
+                }
+            })
+    }) */
